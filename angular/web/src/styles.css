@@ -1,0 +1,24 @@
+:root { color-scheme: dark; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  background: #0f1115;
+  color: #e6e6e6;
+}
+body[data-shell="1"] { padding-top: 36px; }
+
+/* 只在无边框窗口版（--shell）下用到：顶栏样式完全由你决定，这里只是示例。 */
+.axon-titlebar {
+  position: fixed; inset: 0 0 auto 0; height: 36px; z-index: 10;
+  display: flex; align-items: center; gap: 10px; padding: 0 10px;
+  background: #1a1d24; color: #cfd6e4; font-size: 13px; user-select: none;
+}
+.axon-titlebar__brand { font-weight: 700; color: #63c6e2; }
+.axon-titlebar__title { flex: 1; text-align: center; color: #8b95a7; }
+.axon-titlebar__buttons { display: flex; gap: 4px; }
+.axon-titlebar button {
+  width: 34px; height: 26px; padding: 0; border: 0; border-radius: 4px;
+  background: transparent; color: inherit; line-height: 1;
+}
+.axon-titlebar button:hover { background: #2a2f39; }
+.axon-titlebar button.is-close:hover { background: #d93a3a; color: #fff; }

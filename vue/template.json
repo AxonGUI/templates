@@ -1,0 +1,17 @@
+{
+  "id": "vue",
+  "title": "Vue 3 + Vite + TypeScript",
+  "description": "Vue 3 单文件组件，Vite 构建；页面里一行 await AxonInit() 就能调 Python。",
+  "web": {
+    "dir": "web",
+    "install": "npm install",
+    "build": "npm run build",
+    "dist": "dist",
+    "dev": "npm run dev"
+  },
+  "shell": {
+    "main": "shell/main.py",
+    "index": "shell/index.html",
+    "deps": ["axon-shell>=0.2.2"]
+  }
+}

@@ -1,0 +1,6 @@
+<main class="app">
+  <h1>Axon + Angular</h1>
+  <p class="hint">点下面的按钮，会真的调用 Python 里的 Greeter.greet()。</p>
+  <button type="button" class="btn" (click)="callPython()">调一次 Python</button>
+  <pre class="out">{{ info() || "还没有调用" }}</pre>
+</main>

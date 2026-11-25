@@ -1,0 +1,5 @@
+.app { max-width: 680px; margin: 0 auto; padding: 48px 24px; }
+h1 { font-size: 28px; margin: 0 0 12px; }
+.hint { color: #9aa4b2; margin: 0 0 20px; }
+.btn { font: inherit; padding: 8px 16px; cursor: pointer; }
+.out { margin-top: 18px; padding: 12px 14px; background: #171a21; border-radius: 8px; min-height: 1.4em; }

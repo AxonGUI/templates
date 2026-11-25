@@ -1,0 +1,9 @@
+[project]
+name = "axon-template-vue"
+version = "0.1.0"
+description = "Axon 模板：Vue 3 + Vite"
+requires-python = ">=3.12"
+dependencies = ["axon-gui>=5.3.6"]
+
+[tool.uv]
+package = false

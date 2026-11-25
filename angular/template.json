@@ -2,6 +2,19 @@
   "id": "angular",
   "title": "Angular 20 + TypeScript",
   "description": "独立组件 + signals，Angular CLI 构建；同一套通道 API。",
-  "web": { "dir": "web", "install": "npm install", "build": "npm run build", "dist": "dist/browser", "dev": "npm run dev" },
-  "shell": { "main": "shell/main.py", "index": "shell/index.html", "deps": ["axon-shell>=0.2.2"] }
+  "web": {
+    "dir": "web",
+    "install": "npm install",
+    "build": "npm run build",
+    "dist": "dist/browser",
+    "dev": "npm run dev",
+    "index": "src/index.html"
+  },
+  "shell": {
+    "main": "shell/main.py",
+    "index": "shell/index.html",
+    "deps": [
+      "axon-shell>=0.2.2"
+    ]
+  }
 }

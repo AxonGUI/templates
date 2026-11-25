@@ -43,7 +43,9 @@ def _prepare(tpl_dir: Path, shell: bool) -> None:
         # 模拟 CLI 的 --shell：换成无边框入口 + 顶栏 HTML
         (tpl_dir / "main.py").write_text((tpl_dir / meta["shell"]["main"]).read_text())
         shell_html = (tpl_dir / meta["shell"]["index"]).read_text()
-        (tpl_dir / meta["web"]["dir"] / "index.html").write_text(shell_html)
+        # 各框架的入口 HTML 不一定在 web/index.html（Angular 在 web/src/index.html）
+        web_index = meta["web"].get("index", "index.html")
+        (tpl_dir / meta["web"]["dir"] / web_index).write_text(shell_html)
         # 和真实流程一致：先 --shell 换掉 index.html，再构建（dist 里才有那行 script）
         subprocess.run(meta["web"]["build"], cwd=tpl_dir / meta["web"]["dir"], shell=True, check=True)
 

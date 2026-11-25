@@ -2,6 +2,19 @@
   "id": "react",
   "title": "React 19 + Vite + TypeScript",
   "description": "函数组件 + hooks，Vite 构建；同一套通道 API。",
-  "web": { "dir": "web", "install": "npm install", "build": "npm run build", "dist": "dist", "dev": "npm run dev" },
-  "shell": { "main": "shell/main.py", "index": "shell/index.html", "deps": ["axon-shell>=0.2.2"] }
+  "web": {
+    "dir": "web",
+    "install": "npm install",
+    "build": "npm run build",
+    "dist": "dist",
+    "dev": "npm run dev",
+    "index": "index.html"
+  },
+  "shell": {
+    "main": "shell/main.py",
+    "index": "shell/index.html",
+    "deps": [
+      "axon-shell>=0.2.2"
+    ]
+  }
 }

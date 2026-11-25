@@ -7,11 +7,14 @@
     "install": "npm install",
     "build": "npm run build",
     "dist": "dist",
-    "dev": "npm run dev"
+    "dev": "npm run dev",
+    "index": "index.html"
   },
   "shell": {
     "main": "shell/main.py",
     "index": "shell/index.html",
-    "deps": ["axon-shell>=0.2.2"]
+    "deps": [
+      "axon-shell>=0.2.2"
+    ]
   }
 }

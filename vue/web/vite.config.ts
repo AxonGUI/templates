@@ -4,7 +4,7 @@ import { axonTypes } from "axon-gui/vite-plugin";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue(), axonTypes({ args: ["--controllers", "../controller", "--out", "src/axon.generated.ts"] })],
+  plugins: [vue(), axonTypes()],
   server: {
     host: "127.0.0.1",
     port: 5173,

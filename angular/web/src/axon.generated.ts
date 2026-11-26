@@ -1,6 +1,6 @@
 /**
  * 由 `axon-gui types` 生成，请勿手改。
- * axon-gui 5.5.0 · schema v1
+ * schema v1
  */
 
 export interface AxonRegistry {

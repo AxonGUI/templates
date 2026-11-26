@@ -55,7 +55,7 @@ jobs:
       - name: 装 axon-gui / axon-shell
         run: |
           python -m pip install -U pip
-          python -m pip install "axon-gui>=5.3.6" "axon-shell>=0.2.2"
+          python -m pip install --upgrade "axon-gui>=5.5.1" "axon-shell>=0.3.0"
       - name: 装前端依赖并构建
         working-directory: ${{ matrix.template }}/web
         run: |

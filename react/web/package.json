@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "types": "axon-gui types --controllers controller --out src/axon.generated.ts",
-    "types:check": "axon-gui types --controllers controller --out src/axon.generated.ts --check"
+    "types": "axon-gui types --controllers ../controller --out src/axon.generated.ts",
+    "types:check": "axon-gui types --controllers ../controller --out src/axon.generated.ts --check"
   },
   "dependencies": {
     "axon-gui": "^1.3.0",

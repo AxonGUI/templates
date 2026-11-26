@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: ${{ matrix.template }}/web/package-lock.json
+          cache-dependency-path: ${{ matrix.template }}/web/package.json
       - name: 安装前端依赖
         working-directory: ${{ matrix.template }}/web
         run: npm install --no-audit --no-fund
@@ -61,5 +61,8 @@ jobs:
         run: |
           npm install --no-audit --no-fund
           npm run build
+      - name: 类型生成物没漂移
+        working-directory: ${{ matrix.template }}/web
+        run: npm run types:check
       - name: 点一次按钮
         run: python tools/verify_template.py --template ${{ matrix.template }}

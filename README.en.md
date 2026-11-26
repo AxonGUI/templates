@@ -16,6 +16,18 @@ axon-gui init myapp -t react --shell  # frameless window (axon-shell)
 
 `--shell` only swaps the entry pair (`shell/main.py`, `shell/index.html`) and rebuilds; frontend code stays untouched.
 
+## Generated types
+
+Every template ships two scripts:
+
+```bash
+npm run types        # regenerate web/src/axon.generated.ts
+npm run types:check  # verify only (CI fails when the file is stale)
+```
+
+The Vue and React templates also wire `axon-gui/vite-plugin`, which regenerates on `npm run dev` start and on save.
+Angular has no Vite, so run `npm run types` manually after changing the Python controller.
+
 ## Contract
 
 `template.json` per template: `web.{dir,install,build,dist,index,dev}` and `shell.{main,index,deps}`.

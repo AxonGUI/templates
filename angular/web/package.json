@@ -5,7 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "dev": "ng serve"
+    "dev": "ng serve",
+    "types": "axon-gui types --controllers controller --out src/axon.generated.ts",
+    "types:check": "axon-gui types --controllers controller --out src/axon.generated.ts --check"
   },
   "private": true,
   "dependencies": {
@@ -18,7 +20,7 @@
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0",
-    "axon-gui": "^1.1.0",
+    "axon-gui": "^1.3.0",
     "promise-retry": "^2.0.1",
     "qwebchannel": "^6.2.0",
     "uuid": ">=10.0.0"

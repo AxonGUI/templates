@@ -22,6 +22,34 @@ axon-gui init myapp -t react --shell      # 无边框窗口版（加 axon-shell�
 
 `--shell` 就是把 `shell/main.py` 覆盖成入口、`shell/index.html` 覆盖成页面入口（顶栏 + 三个窗口按钮），再正常构建一次；前端代码不用改。
 
+## 类型补全
+
+每套模板都带两个脚本：
+
+```bash
+npm run types        # 重新生成 web/src/axon.generated.ts
+npm run types:check  # 只校验（CI 用，生成物过期会失败）
+```
+
+Vue / React 模板还接了 `axon-gui/vite-plugin`：`npm run dev` 启动时和保存文件时自动重生成。
+Angular 没有 Vite，改完 Python 控制器后手动跑一次 `npm run types`。
+
+生成物长这样（举例）：
+
+```ts
+export interface AxonRegistry {
+  Greeter: {
+    add(a?: number, b?: number): Promise<number>;
+    greet(name?: string): Promise<string>;
+  };
+}
+declare module "axon-gui" {
+  interface AxonControllers extends AxonRegistry {}
+}
+```
+
+有了它，写前端时 `Axon.Greeter.greet(` 会有参数名与类型；写错参数、调用不存在的方法会直接报编译错误。
+
 ## 接入契约
 
 `templates.json`（仓库根）只有一个索引：`{id, title, dir, description}`。

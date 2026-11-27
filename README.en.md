@@ -12,7 +12,7 @@ axon-gui init myapp -t react --shell  # frameless window (axon-shell)
 | --- | --- | --- | --- | --- |
 | `vue` | Vue 3 + Vite + TS | `dist` | `web/index.html` | ✓ |
 | `react` | React 19 + Vite + TS | `dist` | `web/index.html` | ✓ |
-| `angular` | Angular 20 | `dist/browser` | `web/src/index.html` | ✓ |
+| `angular` | Angular 22 | `dist/browser` | `web/src/index.html` | ✓ |
 
 `--shell` only swaps the entry pair (`shell/main.py`, `shell/index.html`) and rebuilds; frontend code stays untouched.
 

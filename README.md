@@ -6,7 +6,7 @@
 axon-gui init --list                      # 列出模板
 axon-gui init myapp -t vue                # 默认 Vue 3
 axon-gui init myapp -t react              # React 19
-axon-gui init myapp -t angular            # Angular 20
+axon-gui init myapp -t angular            # Angular 22
 axon-gui init myapp -t react --shell      # 无边框窗口版（加 axon-shell）
 ```
 
@@ -18,7 +18,7 @@ axon-gui init myapp -t react --shell      # 无边框窗口版（加 axon-shell�
 | --- | --- | --- | --- | --- |
 | `vue` | Vue 3 + Vite + TS | `npm run build` → `dist` | `web/index.html` | ✓ |
 | `react` | React 19 + Vite + TS | `npm run build` → `dist` | `web/index.html` | ✓ |
-| `angular` | Angular 20 | `npm run build` → `dist/browser` | `web/src/index.html` | ✓ |
+| `angular` | Angular 22 | `npm run build` → `dist/browser` | `web/src/index.html` | ✓ |
 
 `--shell` 就是把 `shell/main.py` 覆盖成入口、`shell/index.html` 覆盖成页面入口（顶栏 + 三个窗口按钮），再正常构建一次；前端代码不用改。
 
@@ -72,7 +72,7 @@ declare module "axon-gui" {
   "shell": {
     "main": "shell/main.py",   // 无边框窗口入口
     "index": "shell/index.html", // 替换入口 HTML
-    "deps": ["axon-shell>=0.2.2"] // --shell 时额外写进 pyproject 的依赖
+    "deps": ["axon-shell>=0.3.0"] // --shell 时额外写进 pyproject 的依赖
   }
 }
 ```

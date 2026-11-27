@@ -1,10 +1,11 @@
-import { Component, signal } from "@angular/core";
+import { Component, signal, ChangeDetectionStrategy } from "@angular/core";
 import { Axon } from "axon-gui";
 
 @Component({
   selector: "app-root",
   imports: [],
   templateUrl: "./app.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./app.css",
 })
 export class App {
